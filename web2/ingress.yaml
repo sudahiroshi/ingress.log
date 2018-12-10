@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: web2
+spec:
+  rules:
+  - host: web2.172.16.121.107.nip.io
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: web2
+            servicePort: 80
